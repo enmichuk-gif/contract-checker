@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Проверка условий договоров поставки — прототип</title>
+<link rel="icon" href="data:,"><!-- пустая иконка: браузер не запрашивает /favicon.ico -->
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="brand">
+    <div class="logo" aria-hidden="true">§</div>
+    <div>
+      <h1>Проверка условий договоров поставки</h1>
+      <p class="subtitle">Прототип · Semantic TextNavigator · каждое значение подтверждается точной цитатой из документа</p>
+    </div>
+  </div>
+  <div class="controls">
+    <label class="datewrap">Дата проверки
+      <input type="date" id="asOf" value="2026-03-10">
+    </label>
+    <button id="analyzeBtn" class="primary" disabled>Проанализировать</button>
+  </div>
+</header>
+
+<main>
+
+  <section class="card" id="uploadCard">
+    <h2><span class="step">1</span> Документы</h2>
+    <div id="dropzone" class="dropzone">
+      <p><strong>Перетащите TXT-файлы сюда</strong> или
+        <label class="linklabel">выберите на диске<input type="file" id="fileInput" multiple accept=".txt,text/plain" hidden></label>
+      </p>
+      <p class="hint">Договоры, допсоглашения, письма — в формате TXT. Имя файла и дата загрузки не влияют на приоритет: тип документа и статус подписания определяются только по содержимому.</p>
+    </div>
+    <div id="fileList" class="filelist"></div>
+    <div class="rowactions">
+      <button id="sampleBtn" class="ghost" type="button">Загрузить учебные документы</button>
+      <button id="clearBtn" class="ghost danger" type="button">Очистить всё</button>
+      <span id="analyzeStatus" class="status" role="status"></span>
+    </div>
+  </section>
+
+  <section class="card" id="resultsCard" hidden>
+    <h2><span class="step">2</span> Условия договоров <span class="subhead" id="resultsSubhead"></span></h2>
+    <div id="reviewBanner"></div>
+    <div class="tablewrap">
+      <table id="contractsTable"></table>
+    </div>
+    <p class="hint">Нажмите на значение суммы или срока — раскроется цепочка оснований: файл, пункт, точная цитата и переход к абзацу в исходном тексте. <span class="legend"><span class="badge b-changed">изменено</span> — значение изменено подписанным допсоглашением; <span class="badge b-nodata">нет данных</span> — значение не найдено и не выдумано; <span class="badge b-review">требует проверки</span> — ситуация не разрешена надёжно.</span></p>
+  </section>
+
+  <section class="card" id="proposalsCard" hidden>
+    <h2><span class="step">3</span> Несогласованные предложения об изменении условий</h2>
+    <p class="hint">Проекты допсоглашений и письма поставщиков. Эти значения <strong>не действуют</strong> и не попадают в таблицу — показаны отдельно, чтобы закупщик мог их проверить и инициировать подписание.</p>
+    <div class="tablewrap">
+      <table id="proposalsTable"></table>
+    </div>
+  </section>
+
+  <section class="card" id="warningsCard" hidden>
+    <h2><span class="step">4</span> Требует проверки</h2>
+    <div id="warningsList"></div>
+  </section>
+
+  <section class="card" id="questionsCard" hidden>
+    <h2><span class="step">5</span> Вопросы закупщика</h2>
+    <p class="hint">Ответы строятся из тех же данных и оснований, что и таблица. Параметры (договор, дата) можно менять. Кнопка «Очистить» сбрасывает ответ.</p>
+    <div id="questionsGrid" class="qgrid"></div>
+  </section>
+
+  <section class="card" id="registryCard" hidden>
+    <details>
+      <summary><span class="step">6</span> Реестр загруженных документов</summary>
+      <div class="tablewrap">
+        <table id="registryTable"></table>
+      </div>
+      <div id="unlinkedBlock"></div>
+    </details>
+  </section>
+
+</main>
+
+<div id="viewerModal" class="modal" hidden>
+  <div class="modal-box" role="dialog" aria-modal="true">
+    <div class="modal-head">
+      <div class="modal-title">
+        <strong id="viewerFile"></strong>
+        <span id="viewerMeta" class="hint"></span>
+      </div>
+      <button id="viewerClose" class="ghost" type="button">Закрыть ✕</button>
+    </div>
+    <div id="viewerBody" class="docview" tabindex="0"></div>
+  </div>
+</div>
+
+<footer class="foot">
+  Учебный прототип. Все компании, суммы и даты вымышлены. Значения извлекаются детерминированными правилами из загруженного текста; при отсутствии данных показывается «нет данных», при сомнении — «требует проверки».
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

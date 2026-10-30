@@ -1,0 +1,913 @@
+{
+  "config": {
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "C:\\Users\\enmic\\Downloads\\validator\\validator\\node_modules\\@playwright\\test\\cli.js",
+      "test"
+    ],
+    "configFile": "C:\\Users\\enmic\\Downloads\\validator\\validator\\playwright.config.js",
+    "rootDir": "C:/Users/enmic/Downloads/validator/validator/tests",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "C:/Users/enmic/Downloads/validator/validator/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "C:/Users/enmic/Downloads/validator/validator/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 150000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "C:\\Users\\enmic\\Downloads\\validator\\validator\\test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "",
+        "testDir": "C:\\Users\\enmic\\Downloads\\validator\\validator\\tests",
+        "snapshotDir": "C:\\Users\\enmic\\Downloads\\validator\\validator\\tests",
+        "testIgnore": [],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 150000,
+        "use": {
+          "baseURL": "http://127.0.0.1:8000",
+          "headless": true,
+          "channel": "chromium",
+          "launchOptions": {
+            "args": [
+              "--no-sandbox",
+              "--disable-dev-shm-usage"
+            ]
+          },
+          "screenshot": "only-on-failure",
+          "trace": "retain-on-failure",
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          }
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": ""
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.64.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "01_main_scenario.spec.js",
+      "file": "01_main_scenario.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "TC-01 [C1] До загрузки страница не содержит зашитых ответов",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 150000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 24,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-30T00:22:22.750Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "1221ef0135a7bd784fd4-5efaa185aed53560fbda",
+          "file": "01_main_scenario.spec.js",
+          "line": 20,
+          "column": 1
+        },
+        {
+          "title": "TC-02 [B2,B3] Таблица: три договора с поставщиками",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 150000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 11,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-30T00:22:26.644Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "1221ef0135a7bd784fd4-4bc63bc806ec302b2cfa",
+          "file": "01_main_scenario.spec.js",
+          "line": 29,
+          "column": 1
+        },
+        {
+          "title": "TC-03 [A,Q1,B7] STN-101: сумма 1 380 000 и срок 30.04.2026 (по подписанному ДС №1)",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 150000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 444,
+                  "error": {
+                    "message": "Error: STN-101: ожидался срок 30.04.2026 (из подписанного ДС №1). значение ОТСУТСТВУЕТ в строке целиком (и в видимой, и в скрытой части). Строка: «stn-101 сумма 1 380 000 ₽ 1 450 000 ₽ 06_amendment_draft.txt проект допсоглашения — не подписан сторонами, условия не изменяет показать →»\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m",
+                    "stack": "Error: STN-101: ожидался срок 30.04.2026 (из подписанного ДС №1). значение ОТСУТСТВУЕТ в строке целиком (и в видимой, и в скрытой части). Строка: «stn-101 сумма 1 380 000 ₽ 1 450 000 ₽ 06_amendment_draft.txt проект допсоглашения — не подписан сторонами, условия не изменяет показать →»\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m\n    at C:\\Users\\enmic\\Downloads\\validator\\validator\\tests\\01_main_scenario.spec.js:55:117",
+                    "location": {
+                      "file": "C:\\Users\\enmic\\Downloads\\validator\\validator\\tests\\01_main_scenario.spec.js",
+                      "column": 117,
+                      "line": 55
+                    },
+                    "snippet": "\u001b[0m \u001b[90m 53 |\u001b[39m   \u001b[36mconst\u001b[39m pats \u001b[33m=\u001b[39m \u001b[33mH\u001b[39m\u001b[33m.\u001b[39mdatePats(\u001b[35m30\u001b[39m\u001b[33m,\u001b[39m \u001b[35m4\u001b[39m\u001b[33m,\u001b[39m \u001b[35m2026\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 54 |\u001b[39m   expect(\u001b[33mH\u001b[39m\u001b[33m.\u001b[39mhas(row\u001b[33m.\u001b[39mtext\u001b[33m,\u001b[39m pats)\u001b[33m,\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 55 |\u001b[39m     \u001b[32m`STN-101: ожидался срок 30.04.2026 (из подписанного ДС №1). ${H.valueState(row, pats)}. Строка: «${row.text}»`\u001b[39m)\u001b[33m.\u001b[39mtoBe(\u001b[36mtrue\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                                                                     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 56 |\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 57 |\u001b[39m\n \u001b[90m 58 |\u001b[39m test(\u001b[32m'TC-04 [A,Q2] STN-102: сумма 840 000 и срок 20.03.2026 (аванс и срок оплаты не подменяют значения)'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({}\u001b[33m,\u001b[39m testInfo) \u001b[33m=>\u001b[39m {\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\enmic\\Downloads\\validator\\validator\\tests\\01_main_scenario.spec.js",
+                        "column": 117,
+                        "line": 55
+                      },
+                      "message": "Error: STN-101: ожидался срок 30.04.2026 (из подписанного ДС №1). значение ОТСУТСТВУЕТ в строке целиком (и в видимой, и в скрытой части). Строка: «stn-101 сумма 1 380 000 ₽ 1 450 000 ₽ 06_amendment_draft.txt проект допсоглашения — не подписан сторонами, условия не изменяет показать →»\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m\n\n\u001b[0m \u001b[90m 53 |\u001b[39m   \u001b[36mconst\u001b[39m pats \u001b[33m=\u001b[39m \u001b[33mH\u001b[39m\u001b[33m.\u001b[39mdatePats(\u001b[35m30\u001b[39m\u001b[33m,\u001b[39m \u001b[35m4\u001b[39m\u001b[33m,\u001b[39m \u001b[35m2026\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 54 |\u001b[39m   expect(\u001b[33mH\u001b[39m\u001b[33m.\u001b[39mhas(row\u001b[33m.\u001b[39mtext\u001b[33m,\u001b[39m pats)\u001b[33m,\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 55 |\u001b[39m     \u001b[32m`STN-101: ожидался срок 30.04.2026 (из подписанного ДС №1). ${H.valueState(row, pats)}. Строка: «${row.text}»`\u001b[39m)\u001b[33m.\u001b[39mtoBe(\u001b[36mtrue\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                                                                     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 56 |\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 57 |\u001b[39m\n \u001b[90m 58 |\u001b[39m test(\u001b[32m'TC-04 [A,Q2] STN-102: сумма 840 000 и срок 20.03.2026 (аванс и срок оплаты не подменяют значения)'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({}\u001b[33m,\u001b[39m testInfo) \u001b[33m=>\u001b[39m {\u001b[0m\n\u001b[2m    at C:\\Users\\enmic\\Downloads\\validator\\validator\\tests\\01_main_scenario.spec.js:55:117\u001b[22m"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-30T00:22:26.672Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\enmic\\Downloads\\validator\\validator\\test-results\\01_main_scenario-TC-03-A-Q-5deb3-2026-по-подписанному-ДС-№1-\\test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\enmic\\Downloads\\validator\\validator\\test-results\\01_main_scenario-TC-03-A-Q-5deb3-2026-по-подписанному-ДС-№1-\\error-context.md"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\enmic\\Downloads\\validator\\validator\\test-results\\01_main_scenario-TC-03-A-Q-5deb3-2026-по-подписанному-ДС-№1-\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\enmic\\Downloads\\validator\\validator\\test-results\\01_main_scenario-TC-03-A-Q-5deb3-2026-по-подписанному-ДС-№1-\\trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\enmic\\Downloads\\validator\\validator\\tests\\01_main_scenario.spec.js",
+                    "column": 117,
+                    "line": 55
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "1221ef0135a7bd784fd4-d3c640ac47165bf6cae6",
+          "file": "01_main_scenario.spec.js",
+          "line": 48,
+          "column": 1
+        },
+        {
+          "title": "TC-04 [A,Q2] STN-102: сумма 840 000 и срок 20.03.2026 (аванс и срок оплаты не подменяют значения)",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 150000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 108,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-30T00:22:28.882Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "1221ef0135a7bd784fd4-4f74a71e1aa1e43031ca",
+          "file": "01_main_scenario.spec.js",
+          "line": 58,
+          "column": 1
+        },
+        {
+          "title": "TC-05 [A,Q3,B8] STN-103: «нет данных» по сумме, срок 30.04.2026, лимит 600 000 не выдаётся за сумму",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 150000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 119,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-30T00:22:31.692Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "1221ef0135a7bd784fd4-2f850f42d2f4639a0299",
+          "file": "01_main_scenario.spec.js",
+          "line": 76,
+          "column": 1
+        },
+        {
+          "title": "TC-06 [B4,B9] Проект ДС №2 (1 450 000 / 10.05.2026) не меняет условия и помечен как несогласованный",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 150000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 116,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-30T00:22:31.823Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "1221ef0135a7bd784fd4-014931c9997be389718d",
+          "file": "01_main_scenario.spec.js",
+          "line": 96,
+          "column": 1
+        },
+        {
+          "title": "TC-07 [B9,Q4] Письмо поставщика: перенос STN-102 на 27.03.2026 виден и помечен как несогласованный",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 150000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 112,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-30T00:22:31.957Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "1221ef0135a7bd784fd4-857a003809fa9825d4e2",
+          "file": "01_main_scenario.spec.js",
+          "line": 116,
+          "column": 1
+        },
+        {
+          "title": "TC-08 [B6,B7] Основание суммы STN-101: файл 02_amendment_signed.txt, точная цитата, переход к абзацу",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 150000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 1088,
+                  "error": {
+                    "message": "Error: в основании суммы STN-101 нет точной цитаты «Общая стоимость поставки составляет 1 380 000…» (B6). Если в вашем UI цитата есть — проверьте вручную: возможен промах клика; если цитаты нет — значение не подтверждено исходным текстом\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m",
+                    "stack": "Error: в основании суммы STN-101 нет точной цитаты «Общая стоимость поставки составляет 1 380 000…» (B6). Если в вашем UI цитата есть — проверьте вручную: возможен промах клика; если цитаты нет — значение не подтверждено исходным текстом\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m\n    at C:\\Users\\enmic\\Downloads\\validator\\validator\\tests\\01_main_scenario.spec.js:161:253",
+                    "location": {
+                      "file": "C:\\Users\\enmic\\Downloads\\validator\\validator\\tests\\01_main_scenario.spec.js",
+                      "column": 253,
+                      "line": 161
+                    },
+                    "snippet": "\u001b[0m \u001b[90m 159 |\u001b[39m   }\n \u001b[90m 160 |\u001b[39m   expect(okFile\u001b[33m,\u001b[39m \u001b[32m'в основании суммы STN-101 не показано имя файла 02_amendment_signed.txt (B6)'\u001b[39m)\u001b[33m.\u001b[39mtoBe(\u001b[36mtrue\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 161 |\u001b[39m   expect(okQuote\u001b[33m,\u001b[39m \u001b[32m'в основании суммы STN-101 нет точной цитаты «Общая стоимость поставки составляет 1 380 000…» (B6). Если в вашем UI цитата есть — проверьте вручную: возможен промах клика; если цитаты нет — значение не подтверждено исходным текстом'\u001b[39m)\u001b[33m.\u001b[39mtoBe(\u001b[36mtrue\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                                                                                                                                                                                                                                             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 162 |\u001b[39m   \u001b[90m// переход к абзацу: должен отображаться исходный текст документа (контекст вокруг цитаты)\u001b[39m\n \u001b[90m 163 |\u001b[39m   \u001b[36mconst\u001b[39m src \u001b[33m=\u001b[39m \u001b[35m/дополнительное соглашение|остальные условия договора|вступает в силу 01\\.03\\.2026|пункт 2\\.1 договора изложить/\u001b[39m\u001b[33m.\u001b[39mtest(text)\u001b[33m;\u001b[39m\n \u001b[90m 164 |\u001b[39m   \u001b[36mif\u001b[39m (\u001b[33m!\u001b[39msrc) {\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\enmic\\Downloads\\validator\\validator\\tests\\01_main_scenario.spec.js",
+                        "column": 253,
+                        "line": 161
+                      },
+                      "message": "Error: в основании суммы STN-101 нет точной цитаты «Общая стоимость поставки составляет 1 380 000…» (B6). Если в вашем UI цитата есть — проверьте вручную: возможен промах клика; если цитаты нет — значение не подтверждено исходным текстом\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m\n\n\u001b[0m \u001b[90m 159 |\u001b[39m   }\n \u001b[90m 160 |\u001b[39m   expect(okFile\u001b[33m,\u001b[39m \u001b[32m'в основании суммы STN-101 не показано имя файла 02_amendment_signed.txt (B6)'\u001b[39m)\u001b[33m.\u001b[39mtoBe(\u001b[36mtrue\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 161 |\u001b[39m   expect(okQuote\u001b[33m,\u001b[39m \u001b[32m'в основании суммы STN-101 нет точной цитаты «Общая стоимость поставки составляет 1 380 000…» (B6). Если в вашем UI цитата есть — проверьте вручную: возможен промах клика; если цитаты нет — значение не подтверждено исходным текстом'\u001b[39m)\u001b[33m.\u001b[39mtoBe(\u001b[36mtrue\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                                                                                                                                                                                                                                             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 162 |\u001b[39m   \u001b[90m// переход к абзацу: должен отображаться исходный текст документа (контекст вокруг цитаты)\u001b[39m\n \u001b[90m 163 |\u001b[39m   \u001b[36mconst\u001b[39m src \u001b[33m=\u001b[39m \u001b[35m/дополнительное соглашение|остальные условия договора|вступает в силу 01\\.03\\.2026|пункт 2\\.1 договора изложить/\u001b[39m\u001b[33m.\u001b[39mtest(text)\u001b[33m;\u001b[39m\n \u001b[90m 164 |\u001b[39m   \u001b[36mif\u001b[39m (\u001b[33m!\u001b[39msrc) {\u001b[0m\n\u001b[2m    at C:\\Users\\enmic\\Downloads\\validator\\validator\\tests\\01_main_scenario.spec.js:161:253\u001b[22m"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-30T00:22:32.083Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\enmic\\Downloads\\validator\\validator\\test-results\\01_main_scenario-TC-08-B6--d7b43-ная-цитата-переход-к-абзацу\\test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\enmic\\Downloads\\validator\\validator\\test-results\\01_main_scenario-TC-08-B6--d7b43-ная-цитата-переход-к-абзацу\\error-context.md"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\enmic\\Downloads\\validator\\validator\\test-results\\01_main_scenario-TC-08-B6--d7b43-ная-цитата-переход-к-абзацу\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\enmic\\Downloads\\validator\\validator\\test-results\\01_main_scenario-TC-08-B6--d7b43-ная-цитата-переход-к-абзацу\\trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\enmic\\Downloads\\validator\\validator\\tests\\01_main_scenario.spec.js",
+                    "column": 253,
+                    "line": 161
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "1221ef0135a7bd784fd4-5da2df32289fa97d1051",
+          "file": "01_main_scenario.spec.js",
+          "line": 143,
+          "column": 1
+        },
+        {
+          "title": "TC-09 [B6] Основание срока STN-102: файл 03_contract.txt и цитата «не позднее 20.03.2026»",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 150000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 898,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-30T00:22:34.331Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "1221ef0135a7bd784fd4-969b1ec67bfe472bc7a2",
+          "file": "01_main_scenario.spec.js",
+          "line": 175,
+          "column": 1
+        },
+        {
+          "title": "TC-10 [B10,Q4] Механизм ответа на вопрос о поставках раньше 01.04.2026",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 150000,
+              "annotations": [
+                {
+                  "type": "warning",
+                  "description": "TC-10: явный механизм ответа на Q4 (фильтр/кнопка/запрос) не найден — на встрече проверить, как закупщик ответит на вопрос «раньше 01.04.2026» (B10)"
+                }
+              ],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 20,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "\u001b[33mWARN\u001b[0m TC-10: явный механизм ответа на Q4 (фильтр/кнопка/запрос) не найден — на встрече проверить, как закупщик ответит на вопрос «раньше 01.04.2026» (B10)\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-30T00:22:37.737Z",
+                  "annotations": [
+                    {
+                      "type": "warning",
+                      "description": "TC-10: явный механизм ответа на Q4 (фильтр/кнопка/запрос) не найден — на встрече проверить, как закупщик ответит на вопрос «раньше 01.04.2026» (B10)"
+                    }
+                  ],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "1221ef0135a7bd784fd4-71c48829ef9c7a861fe4",
+          "file": "01_main_scenario.spec.js",
+          "line": 192,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "02_mutations.spec.js",
+      "file": "02_mutations.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "TC-11 [C1] Мутация суммы в ДС №1 (1 380 000 -> 1 390 000) пересчитывает результат",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 150000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 1335,
+                  "error": {
+                    "message": "Error: срок 30.04.2026 должен сохраниться из того же ДС. значение ОТСУТСТВУЕТ в строке целиком (и в видимой, и в скрытой части). Строка: «stn-101 сумма 1 390 000 ₽ 1 450 000 ₽ 06_amendment_draft.txt проект допсоглашения — не подписан сторонами, условия не изменяет показать →»\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m",
+                    "stack": "Error: срок 30.04.2026 должен сохраниться из того же ДС. значение ОТСУТСТВУЕТ в строке целиком (и в видимой, и в скрытой части). Строка: «stn-101 сумма 1 390 000 ₽ 1 450 000 ₽ 06_amendment_draft.txt проект допсоглашения — не подписан сторонами, условия не изменяет показать →»\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m\n    at C:\\Users\\enmic\\Downloads\\validator\\validator\\tests\\02_mutations.spec.js:18:136",
+                    "location": {
+                      "file": "C:\\Users\\enmic\\Downloads\\validator\\validator\\tests\\02_mutations.spec.js",
+                      "column": 136,
+                      "line": 18
+                    },
+                    "snippet": "\u001b[0m \u001b[90m 16 |\u001b[39m     \u001b[32m'Старая сумма 1 380 000 осталась на странице после мутации — значение не извлекается из загруженного текста (C1)'\u001b[39m)\u001b[33m.\u001b[39mtoBe(\u001b[36mfalse\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 17 |\u001b[39m   \u001b[36mconst\u001b[39m p304 \u001b[33m=\u001b[39m \u001b[33mH\u001b[39m\u001b[33m.\u001b[39mdatePats(\u001b[35m30\u001b[39m\u001b[33m,\u001b[39m \u001b[35m4\u001b[39m\u001b[33m,\u001b[39m \u001b[35m2026\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 18 |\u001b[39m   expect(\u001b[33mH\u001b[39m\u001b[33m.\u001b[39mhas(row\u001b[33m.\u001b[39mtext\u001b[33m,\u001b[39m p304)\u001b[33m,\u001b[39m \u001b[32m`срок 30.04.2026 должен сохраниться из того же ДС. ${H.valueState(row, p304)}. Строка: «${row.text}»`\u001b[39m)\u001b[33m.\u001b[39mtoBe(\u001b[36mtrue\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                                                                                        \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 19 |\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 20 |\u001b[39m\n \u001b[90m 21 |\u001b[39m test(\u001b[32m'TC-12 [C1] Новый договор STN-201 того же формата добавляется, подписанное ДС к нему применяется'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\enmic\\Downloads\\validator\\validator\\tests\\02_mutations.spec.js",
+                        "column": 136,
+                        "line": 18
+                      },
+                      "message": "Error: срок 30.04.2026 должен сохраниться из того же ДС. значение ОТСУТСТВУЕТ в строке целиком (и в видимой, и в скрытой части). Строка: «stn-101 сумма 1 390 000 ₽ 1 450 000 ₽ 06_amendment_draft.txt проект допсоглашения — не подписан сторонами, условия не изменяет показать →»\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m\n\n\u001b[0m \u001b[90m 16 |\u001b[39m     \u001b[32m'Старая сумма 1 380 000 осталась на странице после мутации — значение не извлекается из загруженного текста (C1)'\u001b[39m)\u001b[33m.\u001b[39mtoBe(\u001b[36mfalse\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 17 |\u001b[39m   \u001b[36mconst\u001b[39m p304 \u001b[33m=\u001b[39m \u001b[33mH\u001b[39m\u001b[33m.\u001b[39mdatePats(\u001b[35m30\u001b[39m\u001b[33m,\u001b[39m \u001b[35m4\u001b[39m\u001b[33m,\u001b[39m \u001b[35m2026\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 18 |\u001b[39m   expect(\u001b[33mH\u001b[39m\u001b[33m.\u001b[39mhas(row\u001b[33m.\u001b[39mtext\u001b[33m,\u001b[39m p304)\u001b[33m,\u001b[39m \u001b[32m`срок 30.04.2026 должен сохраниться из того же ДС. ${H.valueState(row, p304)}. Строка: «${row.text}»`\u001b[39m)\u001b[33m.\u001b[39mtoBe(\u001b[36mtrue\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                                                                                        \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 19 |\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 20 |\u001b[39m\n \u001b[90m 21 |\u001b[39m test(\u001b[32m'TC-12 [C1] Новый договор STN-201 того же формата добавляется, подписанное ДС к нему применяется'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\u001b[0m\n\u001b[2m    at C:\\Users\\enmic\\Downloads\\validator\\validator\\tests\\02_mutations.spec.js:18:136\u001b[22m"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-30T00:22:37.857Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\enmic\\Downloads\\validator\\validator\\test-results\\02_mutations-TC-11-C1-Мута-6e4a2-000-пересчитывает-результат\\test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\enmic\\Downloads\\validator\\validator\\test-results\\02_mutations-TC-11-C1-Мута-6e4a2-000-пересчитывает-результат\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\enmic\\Downloads\\validator\\validator\\test-results\\02_mutations-TC-11-C1-Мута-6e4a2-000-пересчитывает-результат\\trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\enmic\\Downloads\\validator\\validator\\tests\\02_mutations.spec.js",
+                    "column": 136,
+                    "line": 18
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "a47b4cc44a2cb84b6cad-1c9f79506e1a5faa3982",
+          "file": "02_mutations.spec.js",
+          "line": 8,
+          "column": 1
+        },
+        {
+          "title": "TC-12 [C1] Новый договор STN-201 того же формата добавляется, подписанное ДС к нему применяется",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 150000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2355,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-30T00:22:39.825Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a47b4cc44a2cb84b6cad-d3acdef6d2cb51cbf7ea",
+          "file": "02_mutations.spec.js",
+          "line": 21,
+          "column": 1
+        },
+        {
+          "title": "TC-13 [B4,B8] Без подписанного ДС №1 STN-101 возвращается к условиям договора (1 200 000 / 15.04.2026)",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 150000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 1490,
+                  "error": {
+                    "message": "Error: Без подписанного ДС срок должен быть 15.04.2026 из договора. значение ОТСУТСТВУЕТ в строке целиком (и в видимой, и в скрытой части). Строка: «stn-101 сумма 1 200 000 ₽ 1 450 000 ₽ 06_amendment_draft.txt проект допсоглашения — не подписан сторонами, условия не изменяет показать →»\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m",
+                    "stack": "Error: Без подписанного ДС срок должен быть 15.04.2026 из договора. значение ОТСУТСТВУЕТ в строке целиком (и в видимой, и в скрытой части). Строка: «stn-101 сумма 1 200 000 ₽ 1 450 000 ₽ 06_amendment_draft.txt проект допсоглашения — не подписан сторонами, условия не изменяет показать →»\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m\n    at C:\\Users\\enmic\\Downloads\\validator\\validator\\tests\\02_mutations.spec.js:45:119",
+                    "location": {
+                      "file": "C:\\Users\\enmic\\Downloads\\validator\\validator\\tests\\02_mutations.spec.js",
+                      "column": 119,
+                      "line": 45
+                    },
+                    "snippet": "\u001b[0m \u001b[90m 43 |\u001b[39m   \u001b[36mconst\u001b[39m p154 \u001b[33m=\u001b[39m \u001b[33mH\u001b[39m\u001b[33m.\u001b[39mdatePats(\u001b[35m15\u001b[39m\u001b[33m,\u001b[39m \u001b[35m4\u001b[39m\u001b[33m,\u001b[39m \u001b[35m2026\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 44 |\u001b[39m   expect(\u001b[33mH\u001b[39m\u001b[33m.\u001b[39mhas(row\u001b[33m.\u001b[39mtext\u001b[33m,\u001b[39m p154)\u001b[33m,\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 45 |\u001b[39m     \u001b[32m`Без подписанного ДС срок должен быть 15.04.2026 из договора. ${H.valueState(row, p154)}. Строка: «${row.text}»`\u001b[39m)\u001b[33m.\u001b[39mtoBe(\u001b[36mtrue\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                                                                       \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 46 |\u001b[39m   \u001b[36mconst\u001b[39m text \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m \u001b[33mH\u001b[39m\u001b[33m.\u001b[39mbody(page)\u001b[33m;\u001b[39m\n \u001b[90m 47 |\u001b[39m   expect(\u001b[33mH\u001b[39m\u001b[33m.\u001b[39mhas(text\u001b[33m,\u001b[39m \u001b[33mH\u001b[39m\u001b[33m.\u001b[39mamountRe(\u001b[32m'1380000'\u001b[39m))\u001b[33m,\u001b[39m\n \u001b[90m 48 |\u001b[39m     \u001b[32m'1 380 000 показана, хотя файл ДС не загружался — сумма зашита в код (C1)'\u001b[39m)\u001b[33m.\u001b[39mtoBe(\u001b[36mfalse\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\enmic\\Downloads\\validator\\validator\\tests\\02_mutations.spec.js",
+                        "column": 119,
+                        "line": 45
+                      },
+                      "message": "Error: Без подписанного ДС срок должен быть 15.04.2026 из договора. значение ОТСУТСТВУЕТ в строке целиком (и в видимой, и в скрытой части). Строка: «stn-101 сумма 1 200 000 ₽ 1 450 000 ₽ 06_amendment_draft.txt проект допсоглашения — не подписан сторонами, условия не изменяет показать →»\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m\n\n\u001b[0m \u001b[90m 43 |\u001b[39m   \u001b[36mconst\u001b[39m p154 \u001b[33m=\u001b[39m \u001b[33mH\u001b[39m\u001b[33m.\u001b[39mdatePats(\u001b[35m15\u001b[39m\u001b[33m,\u001b[39m \u001b[35m4\u001b[39m\u001b[33m,\u001b[39m \u001b[35m2026\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 44 |\u001b[39m   expect(\u001b[33mH\u001b[39m\u001b[33m.\u001b[39mhas(row\u001b[33m.\u001b[39mtext\u001b[33m,\u001b[39m p154)\u001b[33m,\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 45 |\u001b[39m     \u001b[32m`Без подписанного ДС срок должен быть 15.04.2026 из договора. ${H.valueState(row, p154)}. Строка: «${row.text}»`\u001b[39m)\u001b[33m.\u001b[39mtoBe(\u001b[36mtrue\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                                                                       \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 46 |\u001b[39m   \u001b[36mconst\u001b[39m text \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m \u001b[33mH\u001b[39m\u001b[33m.\u001b[39mbody(page)\u001b[33m;\u001b[39m\n \u001b[90m 47 |\u001b[39m   expect(\u001b[33mH\u001b[39m\u001b[33m.\u001b[39mhas(text\u001b[33m,\u001b[39m \u001b[33mH\u001b[39m\u001b[33m.\u001b[39mamountRe(\u001b[32m'1380000'\u001b[39m))\u001b[33m,\u001b[39m\n \u001b[90m 48 |\u001b[39m     \u001b[32m'1 380 000 показана, хотя файл ДС не загружался — сумма зашита в код (C1)'\u001b[39m)\u001b[33m.\u001b[39mtoBe(\u001b[36mfalse\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at C:\\Users\\enmic\\Downloads\\validator\\validator\\tests\\02_mutations.spec.js:45:119\u001b[22m"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-30T00:22:42.365Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\enmic\\Downloads\\validator\\validator\\test-results\\02_mutations-TC-13-B4-B8-Б-e7445-овора-1-200-000-15-04-2026-\\test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\enmic\\Downloads\\validator\\validator\\test-results\\02_mutations-TC-13-B4-B8-Б-e7445-овора-1-200-000-15-04-2026-\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\enmic\\Downloads\\validator\\validator\\test-results\\02_mutations-TC-13-B4-B8-Б-e7445-овора-1-200-000-15-04-2026-\\trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\enmic\\Downloads\\validator\\validator\\tests\\02_mutations.spec.js",
+                    "column": 119,
+                    "line": 45
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "a47b4cc44a2cb84b6cad-6ee915b9bf72e68b1150",
+          "file": "02_mutations.spec.js",
+          "line": 37,
+          "column": 1
+        },
+        {
+          "title": "TC-14 [C4] ДС, вступающее в силу после даты проверки (20.03.2026 > 10.03.2026), не применяется",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 150000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 5567,
+                  "error": {
+                    "message": "Error: срок должен остаться 15.04.2026 — ДС ещё не вступило в силу на дату проверки. значение ОТСУТСТВУЕТ в строке целиком (и в видимой, и в скрытой части). Строка: «stn-101 сумма 1 200 000 ₽ 1 450 000 ₽ 06_amendment_draft.txt проект допсоглашения — не подписан сторонами, условия не изменяет показать →»\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m",
+                    "stack": "Error: срок должен остаться 15.04.2026 — ДС ещё не вступило в силу на дату проверки. значение ОТСУТСТВУЕТ в строке целиком (и в видимой, и в скрытой части). Строка: «stn-101 сумма 1 200 000 ₽ 1 450 000 ₽ 06_amendment_draft.txt проект допсоглашения — не подписан сторонами, условия не изменяет показать →»\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m\n    at C:\\Users\\enmic\\Downloads\\validator\\validator\\tests\\02_mutations.spec.js:62:137",
+                    "location": {
+                      "file": "C:\\Users\\enmic\\Downloads\\validator\\validator\\tests\\02_mutations.spec.js",
+                      "column": 137,
+                      "line": 62
+                    },
+                    "snippet": "\u001b[0m \u001b[90m 60 |\u001b[39m   \u001b[36mconst\u001b[39m p154b \u001b[33m=\u001b[39m \u001b[33mH\u001b[39m\u001b[33m.\u001b[39mdatePats(\u001b[35m15\u001b[39m\u001b[33m,\u001b[39m \u001b[35m4\u001b[39m\u001b[33m,\u001b[39m \u001b[35m2026\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 61 |\u001b[39m   expect(\u001b[33mH\u001b[39m\u001b[33m.\u001b[39mhas(row\u001b[33m.\u001b[39mtext\u001b[33m,\u001b[39m p154b)\u001b[33m,\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 62 |\u001b[39m     \u001b[32m`срок должен остаться 15.04.2026 — ДС ещё не вступило в силу на дату проверки. ${H.valueState(row, p154b)}. Строка: «${row.text}»`\u001b[39m)\u001b[33m.\u001b[39mtoBe(\u001b[36mtrue\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                                                                                         \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 63 |\u001b[39m   expect(\u001b[33mH\u001b[39m\u001b[33m.\u001b[39mhas(row\u001b[33m.\u001b[39mtext\u001b[33m,\u001b[39m \u001b[33mH\u001b[39m\u001b[33m.\u001b[39mamountRe(\u001b[32m'1380000'\u001b[39m))\u001b[33m,\u001b[39m\n \u001b[90m 64 |\u001b[39m     \u001b[32m'в строке показана сумма из ДС, которое ещё не вступило в силу (C4)'\u001b[39m)\u001b[33m.\u001b[39mtoBe(\u001b[36mfalse\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 65 |\u001b[39m   \u001b[36mconst\u001b[39m text \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m \u001b[33mH\u001b[39m\u001b[33m.\u001b[39mbody(page)\u001b[33m;\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\enmic\\Downloads\\validator\\validator\\tests\\02_mutations.spec.js",
+                        "column": 137,
+                        "line": 62
+                      },
+                      "message": "Error: срок должен остаться 15.04.2026 — ДС ещё не вступило в силу на дату проверки. значение ОТСУТСТВУЕТ в строке целиком (и в видимой, и в скрытой части). Строка: «stn-101 сумма 1 200 000 ₽ 1 450 000 ₽ 06_amendment_draft.txt проект допсоглашения — не подписан сторонами, условия не изменяет показать →»\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m\n\n\u001b[0m \u001b[90m 60 |\u001b[39m   \u001b[36mconst\u001b[39m p154b \u001b[33m=\u001b[39m \u001b[33mH\u001b[39m\u001b[33m.\u001b[39mdatePats(\u001b[35m15\u001b[39m\u001b[33m,\u001b[39m \u001b[35m4\u001b[39m\u001b[33m,\u001b[39m \u001b[35m2026\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 61 |\u001b[39m   expect(\u001b[33mH\u001b[39m\u001b[33m.\u001b[39mhas(row\u001b[33m.\u001b[39mtext\u001b[33m,\u001b[39m p154b)\u001b[33m,\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 62 |\u001b[39m     \u001b[32m`срок должен остаться 15.04.2026 — ДС ещё не вступило в силу на дату проверки. ${H.valueState(row, p154b)}. Строка: «${row.text}»`\u001b[39m)\u001b[33m.\u001b[39mtoBe(\u001b[36mtrue\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                                                                                         \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 63 |\u001b[39m   expect(\u001b[33mH\u001b[39m\u001b[33m.\u001b[39mhas(row\u001b[33m.\u001b[39mtext\u001b[33m,\u001b[39m \u001b[33mH\u001b[39m\u001b[33m.\u001b[39mamountRe(\u001b[32m'1380000'\u001b[39m))\u001b[33m,\u001b[39m\n \u001b[90m 64 |\u001b[39m     \u001b[32m'в строке показана сумма из ДС, которое ещё не вступило в силу (C4)'\u001b[39m)\u001b[33m.\u001b[39mtoBe(\u001b[36mfalse\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 65 |\u001b[39m   \u001b[36mconst\u001b[39m text \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m \u001b[33mH\u001b[39m\u001b[33m.\u001b[39mbody(page)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at C:\\Users\\enmic\\Downloads\\validator\\validator\\tests\\02_mutations.spec.js:62:137\u001b[22m"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-30T00:22:45.045Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\enmic\\Downloads\\validator\\validator\\test-results\\02_mutations-TC-14-C4-ДС-в-af610-6-10-03-2026-не-применяется\\test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\enmic\\Downloads\\validator\\validator\\test-results\\02_mutations-TC-14-C4-ДС-в-af610-6-10-03-2026-не-применяется\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\enmic\\Downloads\\validator\\validator\\test-results\\02_mutations-TC-14-C4-ДС-в-af610-6-10-03-2026-не-применяется\\trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\enmic\\Downloads\\validator\\validator\\tests\\02_mutations.spec.js",
+                    "column": 137,
+                    "line": 62
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "a47b4cc44a2cb84b6cad-6e4dac3a6324523be2ce",
+          "file": "02_mutations.spec.js",
+          "line": 54,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "03_robustness.spec.js",
+      "file": "03_robustness.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "TC-15 [B5] Два конфликтующих подписанных ДС к STN-102 -> явная пометка о необходимости проверки",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 150000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 5,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 5259,
+                  "error": {
+                    "message": "Error: При двух конфликтующих подписанных ДС (одинаковый номер и дата вступления в силу, разные сроки 25.03/28.03) приложение должно явно показывать необходимость проверки (B5), а не молча выбирать одно значение. Пометка не найдена ни в строке STN-102, ни рядом с упоминанием конфликта\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m",
+                    "stack": "Error: При двух конфликтующих подписанных ДС (одинаковый номер и дата вступления в силу, разные сроки 25.03/28.03) приложение должно явно показывать необходимость проверки (B5), а не молча выбирать одно значение. Пометка не найдена ни в строке STN-102, ни рядом с упоминанием конфликта\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m\n    at C:\\Users\\enmic\\Downloads\\validator\\validator\\tests\\03_robustness.spec.js:28:287",
+                    "location": {
+                      "file": "C:\\Users\\enmic\\Downloads\\validator\\validator\\tests\\03_robustness.spec.js",
+                      "column": 287,
+                      "line": 28
+                    },
+                    "snippet": "\u001b[0m \u001b[90m 26 |\u001b[39m   }\n \u001b[90m 27 |\u001b[39m   expect(flagged\u001b[33m,\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 28 |\u001b[39m     \u001b[32m'При двух конфликтующих подписанных ДС (одинаковый номер и дата вступления в силу, разные сроки 25.03/28.03) приложение должно явно показывать необходимость проверки (B5), а не молча выбирать одно значение. Пометка не найдена ни в строке STN-102, ни рядом с упоминанием конфликта'\u001b[39m)\u001b[33m.\u001b[39mtoBe(\u001b[36mtrue\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                                                                                                                                                                                                                                               \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 29 |\u001b[39m   \u001b[36mconst\u001b[39m flags \u001b[33m=\u001b[39m \u001b[35m/предлож|не согласован|несогласован|письм|перенос|проект|требует|рассмотр|ожид|запрос/i\u001b[39m\u001b[33m;\u001b[39m\n \u001b[90m 30 |\u001b[39m   \u001b[36mconst\u001b[39m bad \u001b[33m=\u001b[39m \u001b[33mH\u001b[39m\u001b[33m.\u001b[39munflagged(text\u001b[33m,\u001b[39m \u001b[33mH\u001b[39m\u001b[33m.\u001b[39morRe(\u001b[33mH\u001b[39m\u001b[33m.\u001b[39mdatePats(\u001b[35m27\u001b[39m\u001b[33m,\u001b[39m \u001b[35m3\u001b[39m\u001b[33m,\u001b[39m \u001b[35m2026\u001b[39m))\u001b[33m,\u001b[39m flags)\u001b[33m;\u001b[39m\n \u001b[90m 31 |\u001b[39m   expect(bad\u001b[33m,\u001b[39m \u001b[32m'письмо-предложение (27.03.2026) перестало помечаться как несогласованное'\u001b[39m)\u001b[33m.\u001b[39mtoHaveLength(\u001b[35m0\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\enmic\\Downloads\\validator\\validator\\tests\\03_robustness.spec.js",
+                        "column": 287,
+                        "line": 28
+                      },
+                      "message": "Error: При двух конфликтующих подписанных ДС (одинаковый номер и дата вступления в силу, разные сроки 25.03/28.03) приложение должно явно показывать необходимость проверки (B5), а не молча выбирать одно значение. Пометка не найдена ни в строке STN-102, ни рядом с упоминанием конфликта\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m\n\n\u001b[0m \u001b[90m 26 |\u001b[39m   }\n \u001b[90m 27 |\u001b[39m   expect(flagged\u001b[33m,\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 28 |\u001b[39m     \u001b[32m'При двух конфликтующих подписанных ДС (одинаковый номер и дата вступления в силу, разные сроки 25.03/28.03) приложение должно явно показывать необходимость проверки (B5), а не молча выбирать одно значение. Пометка не найдена ни в строке STN-102, ни рядом с упоминанием конфликта'\u001b[39m)\u001b[33m.\u001b[39mtoBe(\u001b[36mtrue\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                                                                                                                                                                                                                                               \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 29 |\u001b[39m   \u001b[36mconst\u001b[39m flags \u001b[33m=\u001b[39m \u001b[35m/предлож|не согласован|несогласован|письм|перенос|проект|требует|рассмотр|ожид|запрос/i\u001b[39m\u001b[33m;\u001b[39m\n \u001b[90m 30 |\u001b[39m   \u001b[36mconst\u001b[39m bad \u001b[33m=\u001b[39m \u001b[33mH\u001b[39m\u001b[33m.\u001b[39munflagged(text\u001b[33m,\u001b[39m \u001b[33mH\u001b[39m\u001b[33m.\u001b[39morRe(\u001b[33mH\u001b[39m\u001b[33m.\u001b[39mdatePats(\u001b[35m27\u001b[39m\u001b[33m,\u001b[39m \u001b[35m3\u001b[39m\u001b[33m,\u001b[39m \u001b[35m2026\u001b[39m))\u001b[33m,\u001b[39m flags)\u001b[33m;\u001b[39m\n \u001b[90m 31 |\u001b[39m   expect(bad\u001b[33m,\u001b[39m \u001b[32m'письмо-предложение (27.03.2026) перестало помечаться как несогласованное'\u001b[39m)\u001b[33m.\u001b[39mtoHaveLength(\u001b[35m0\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at C:\\Users\\enmic\\Downloads\\validator\\validator\\tests\\03_robustness.spec.js:28:287\u001b[22m"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-30T00:22:53.183Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\enmic\\Downloads\\validator\\validator\\test-results\\03_robustness-TC-15-B5-Два-4b169-ка-о-необходимости-проверки\\test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\enmic\\Downloads\\validator\\validator\\test-results\\03_robustness-TC-15-B5-Два-4b169-ка-о-необходимости-проверки\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\enmic\\Downloads\\validator\\validator\\test-results\\03_robustness-TC-15-B5-Два-4b169-ка-о-необходимости-проверки\\trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\enmic\\Downloads\\validator\\validator\\tests\\03_robustness.spec.js",
+                    "column": 287,
+                    "line": 28
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "e009528a18da73c5fea2-072d604b61a691aab2af",
+          "file": "03_robustness.spec.js",
+          "line": 6,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-10-30T00:22:22.305Z",
+    "duration": 37373.088,
+    "expected": 9,
+    "skipped": 0,
+    "unexpected": 6,
+    "flaky": 0
+  }
+}
